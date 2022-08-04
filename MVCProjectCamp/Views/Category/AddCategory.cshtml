@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.Category
+@{
+    Layout = null;
+}
+<!--Category'deki AddCategory-->
+<h1>Yeni kategori ekleme sayfası</h1>
+<br />
+
+@using (Html.BeginForm("AddCategory","Category",FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Kategori Adı")
+        @Html.TextBoxFor(x=> x.CategoryName)
+        @Html.ValidationMessageFor(x=> x.CategoryName)
+        <br /> <br />
+        @Html.Label("Açıklamayı Yazınız")
+        @Html.TextBoxFor(x=> x.CategoryDescription)
+        @Html.ValidationMessageFor(x=> x.CategoryDescription)
+        <br /><br />
+        <button>Kaydet</button>
+    </div>
+}
+
+<!--<form class="form-group" method="post">
+    <!--buradaki method bize form tagının içinde işlem ne zama çalışsın anlamına gelir
+    <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" /> <!-- eğer bburada name'i vermezsek verinin nereye girileceği bilinmediğin boş kayıt atar.
+    <br />
+    <input type="text" placeholder="Açıklama giriniz.!" name="CategoryDescription" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Ekle</button>
+
+    <!--buradaki input giriş yapışalacak tür demektir. type dediğimiz de orada kullanabileceğmiiz araçlar çıka r.
+
+</form>-->
+
+<!--yukarı kısmı yorum satırı haline getirmemizdeki sebep htmlhelper'dan yararlanacağız.-->
