@@ -13,6 +13,6 @@ namespace BusinessLayer.Abstract
         void AboutAdd(About about);
         About GetByID(int id);
         void AboutUpdate(About about);
-        void AboutDelete(About about);
+        void AboutDelete(About about); 
     }
 }
