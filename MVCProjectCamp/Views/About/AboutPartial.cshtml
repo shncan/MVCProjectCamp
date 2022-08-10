@@ -1,0 +1,50 @@
+﻿
+<!--ABOUTPARTIAL KISMI-->
+
+<button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
+    <!-- bu kısımdaki data-toogle="modal" yapısı bize popup ı verecek.-->
+    Yeni Hakkımızda Yazı Girişi
+
+</button>
+<h6>Partial Alanı</h6>
+<div class="modal" id="Modal1">
+    <!--burada türü modal olan bir div tanımladık. buradaki id yukardaki data-targettaki değer ile aynı olmalı.-->
+    <!--yukardaki div ile butona tıklandığında hafif karanlık olması sağlandı.-->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- modal-content ile ifadesiyle butona tıkladığımızda oluşan karanlık yerde düz bir çizgi oluşturduk.-->
+
+            <div class="modal-header">
+                <!--modal-header ile butona tıkladığımızda bir başlık alanı oluşturduk.-->
+                <h2 class="modal-title">Hakkımızda Metin Girişi</h2>
+            </div>
+            <form method="Post" action="/About/AddAbout/">
+                <!--burada metodun post olunca çalışacağını ve action kısmında da nereye gideceğini yazacağız.-->
+                <div class="modal-body">
+
+                    <!--burada da oluşturduğumuz title'ın altında içeriğin yazacağı gövde kısmını oluşturduk.-->
+                    <label>Hakkımda Metin 1</label>
+                    <input type="text" name="AboutDetails" class="form-control" /> <!-- 1.ci metin için tipi input type text olan yani yazı girebileceğimiz bir alan. name için değer atanacak class'ı da form control olacak şekilde tanımladık.-->
+
+                    <br />
+                    <label>Hakkımda Metin 2</label>
+                    <input type="text" name="AboutDetails2" class="form-control" />
+
+                    <br />
+                    <label>Hakkımda Görsel 1</label>
+                    <input type="text" name="AboutImage" class="form-control" />
+
+                    <br />
+                    <label>Hakkımda Görsel 2</label>
+                    <input type="text" name="AboutImage2" class="form-control" />
+
+                    <br />
+                    <button class="btn btn-info">Kaydet</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- bu partial'ı indexte çağıracağız.-->

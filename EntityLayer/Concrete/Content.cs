@@ -16,6 +16,8 @@ namespace EntityLayer.Concrete
 
         public DateTime ContentDate { get; set; }
 
+        public bool ContentStatus { get; set; } //Bu kısmı silme işleminin yerini alacak olan aktif-pasif işlemi için sonradan ekledik. Tüm claslara ekleyeceğiz.
+        //veritabanından verileri silmek oldukça işlevsiz bir yoldur, eğer sileceksek bile sildiğimiz verileri başka bir veritabanında tutmak gerekebilir.
         public int HeadingID { get; set; } // Headingle ilişkili olduğu için.
 
         public virtual Heading Heading { get; set; }

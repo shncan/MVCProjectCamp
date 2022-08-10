@@ -62,5 +62,40 @@ namespace MVCProjectCamp.Controllers
         //    return View(); //id parametresine ihtiyacımız olacak çünkü başlığa ait yazıları görüntülemek istediğimizde 
         //}
 
+
+        [HttpGet]   
+        public ActionResult EditHeading(int id)
+        {
+            //bu kısımda isim ve kategorisi değişebildiği için bir alttaki kod satırını yazdık.
+
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,            //görünen kısmı
+                                                      Value = x.CategoryID.ToString()   //arka planda değerini tutan kısım
+                                                  }).ToList();  //yapısı gereği listede gösterebilmemiz için önce ID'yi stringe çevirmeliyiz. sonrada tüm içeriği tolist ile listeye çevirmeliyiz.
+            ViewBag.vlc = valuecategory;
+          
+            var HeadingValue = hm.GetByID(id);
+            return View(HeadingValue);
+        }
+
+        [HttpPost]
+        public ActionResult EditHeading(Heading p)
+        {
+            hm.HeadingUpdate(p);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteHeading(int id)
+        {
+            // işlem olarak delete gibi görünse bile biz önceden de belirttiğimiz gibi aktif-pasif işlemi yapacağız.
+            // Yani status'u true ya da false yapacağız. Silme işlemi büyük verilerde sıkıntı olabilir, onun yerine aktif-pasif şeeklinde kullanım yaparız.
+            var HeadingValue = hm.GetByID(id);
+            HeadingValue.HeadingStatus = false;
+            hm.HeadingDelete(HeadingValue);
+            return RedirectToAction("Index");
+
+        }
     }
 }

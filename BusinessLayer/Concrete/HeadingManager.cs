@@ -36,7 +36,9 @@ namespace BusinessLayer.Concrete
 
         public void HeadingDelete(Heading heading)
         {
-            _headingDal.Delete(heading);
+           // heading.HeadingStatus = false; // yalnız bu kötü bir kullanım, manager tarafında en fazla id çağırmalıyız. entityler burada yer almamalı.
+            _headingDal.Update(heading); //burada biz ilk önce silme işlemi yapıyorduk ancak bizim sonradan istediğimiz şey
+            //silmek yerine aktif-pasif işlemi yapmak yani status durumunu güncelleme işlemi yapmak istiyoruz.
         }
 
         public void HeadingUpdate(Heading heading)

@@ -16,6 +16,8 @@ namespace EntityLayer.Concrete
 
         public DateTime HeadingDate { get; set; }
 
+        public bool HeadingStatus { get; set; }
+
         public int CategoryID { get; set; } //Buradaki id ilişkili tablodan gelmeli. 
         public  Category Category{ get; set; } // Category sınıfından Category isminde bir proporty oluşturduk. ilgili sınıf category olduğu için burdan aldık.
 

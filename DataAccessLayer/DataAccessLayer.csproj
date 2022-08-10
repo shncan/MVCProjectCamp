@@ -88,6 +88,18 @@
     <Compile Include="Migrations\202208031634138_mig_writer_addstatus.designer.cs">
       <DependentUpon>202208031634138_mig_writer_addstatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208051026518_mig_contentstatusadd.cs" />
+    <Compile Include="Migrations\202208051026518_mig_contentstatusadd.designer.cs">
+      <DependentUpon>202208051026518_mig_contentstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208051030594_mig_headingstatusadd.cs" />
+    <Compile Include="Migrations\202208051030594_mig_headingstatusadd.designer.cs">
+      <DependentUpon>202208051030594_mig_headingstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208080008552_ignore_mig.cs" />
+    <Compile Include="Migrations\202208080008552_ignore_mig.designer.cs">
+      <DependentUpon>202208080008552_ignore_mig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,6 +128,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208031634138_mig_writer_addstatus.resx">
       <DependentUpon>202208031634138_mig_writer_addstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208051026518_mig_contentstatusadd.resx">
+      <DependentUpon>202208051026518_mig_contentstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208051030594_mig_headingstatusadd.resx">
+      <DependentUpon>202208051030594_mig_headingstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208080008552_ignore_mig.resx">
+      <DependentUpon>202208080008552_ignore_mig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
