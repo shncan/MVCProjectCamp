@@ -100,6 +100,10 @@
     <Compile Include="Migrations\202208080008552_ignore_mig.designer.cs">
       <DependentUpon>202208080008552_ignore_mig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208102121550_mig_add_message.cs" />
+    <Compile Include="Migrations\202208102121550_mig_add_message.designer.cs">
+      <DependentUpon>202208102121550_mig_add_message.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -137,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208080008552_ignore_mig.resx">
       <DependentUpon>202208080008552_ignore_mig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208102121550_mig_add_message.resx">
+      <DependentUpon>202208102121550_mig_add_message.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
