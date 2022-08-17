@@ -145,6 +145,7 @@
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
     <Compile Include="Global.asax.cs">
@@ -186,6 +187,7 @@
     <Content Include="AdminTemp\dist\css\alt\adminlte.plugins.min.css" />
     <Content Include="AdminTemp\dist\img\2.png" />
     <Content Include="AdminTemp\dist\img\4.png" />
+    <Content Include="AdminTemp\dist\img\admin55.jpg" />
     <Content Include="AdminTemp\dist\img\AdminLTELogo.png" />
     <Content Include="AdminTemp\dist\img\avatar.png" />
     <Content Include="AdminTemp\dist\img\avatar04.png" />
@@ -2302,6 +2304,7 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\GetContactDetails.cshtml" />
     <Content Include="Views\Contact\MessageListMenu.cshtml" />
+    <Content Include="Views\Message\Inbox.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
