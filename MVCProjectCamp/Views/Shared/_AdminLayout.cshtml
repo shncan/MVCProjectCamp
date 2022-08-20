@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="~/AdminTemp/dist/css/adminlte.min.css">  <!--burası asıl görselliği sağlayan css özellikleri-->
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <script src="~/AdminTemp/plugins/jquery/jquery.min.js"></script>  <!-- bu kısım mesaj ekleme sayfasındaki hatanın çözümü için buraya eklendi-->
+
+  
+
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -32,7 +36,6 @@ to get the desired effect
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
         <!-- Navbar -->
-        
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -50,8 +53,9 @@ to get the desired effect
                         <img src="~/AdminTemp/dist/img/admin55.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block"> Admin Paneli>
-                         </a>
+                        <a href="#" class="d-block">
+                            Admin Paneli>
+                        </a>
                     </div>
                 </div>
                 <!-- Sidebar Menu -->
@@ -59,13 +63,15 @@ to get the desired effect
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
-                        <li class="nav-item has-treeview"> <!--burada treeview menu-open şeklindeydi, seçili olmaısnı kaldırmak için menu-open ı sildik-->
-                            <a href="/AdminCategory/Index/" class="nav-link"> <!--Burada menümüzün solundaki menüye link veriyoruz.-->
+                        <li class="nav-item has-treeview">
+                            <!--burada treeview menu-open şeklindeydi, seçili olmaısnı kaldırmak için menu-open ı sildik-->
+                            <a href="/AdminCategory/Index/" class="nav-link">
+                                <!--Burada menümüzün solundaki menüye link veriyoruz.-->
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Kategoriler                                    
+                                    Kategoriler
                                 </p>
-                            </a>                           
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a href="/Heading/Index/" class="nav-link">
@@ -81,7 +87,7 @@ to get the desired effect
                                 <p>
                                     Yazarlar
                                 </p>
-                            </a>                            
+                            </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -113,20 +119,21 @@ to get the desired effect
                             </ul>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="/About/Index" class="nav-link"> <!-- burası ile about'u referanslıyoruz. yani tıkladığımız zaman about sayfasına gidecek yolu oluşturuyoruz.-->
+                            <a href="/About/Index" class="nav-link">
+                                <!-- burası ile about'u referanslıyoruz. yani tıkladığımız zaman about sayfasına gidecek yolu oluşturuyoruz.-->
                                 <i class="nav-icon fas fa-tree"></i>
                                 <p>
                                     Hakkımızda
                                 </p>
-                            </a>                           
+                            </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="/Contact/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
                                 <p>
                                     İletişim & Mesajlar
                                 </p>
-                            </a>                            
+                            </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -134,7 +141,7 @@ to get the desired effect
                                 <p>
                                     Yazılar
                                 </p>
-                            </a>                            
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a href="pages/calendar.html" class="nav-link">
@@ -159,7 +166,7 @@ to get the desired effect
                                     Hata Sayfaları
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
-                            </a>                           
+                            </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -168,7 +175,7 @@ to get the desired effect
                                     Siteye Git
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
-                            </a>                            
+                            </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -176,8 +183,8 @@ to get the desired effect
                                 <p>
                                     Çıkış Yap
                                 </p>
-                            </a>                           
-                        </li>                                                                                              
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -187,7 +194,6 @@ to get the desired effect
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            
             <!-- /.content-header -->
             <!-- Main content -->
             <div class="content">
@@ -198,10 +204,9 @@ to get the desired effect
         </div>
         <!-- /.content-wrapper -->
         <!-- Control Sidebar -->
-        
         <!-- /.control-sidebar -->
         <!-- Main Footer -->
-        
+
         <footer class="main-footer">
             <strong>PROJE ÇALIŞMASI(BLOG SİTESİ YAPIMI)</strong>
             @*<strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>*@
@@ -212,16 +217,25 @@ to get the desired effect
         </footer>
     </div>
     <!-- ./wrapper -->
-    <!-- REQUIRED SCRIPTS -->  
+    <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
-    <script src="../AdminTemp/plugins/jquery/jquery.min.js"></script>
+    <script src="~/AdminTemp/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../AdminTempplugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/AdminTemp/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE -->
-    <script src="../AdminTemp/dist/js/adminlte.js"></script>
+    <script src="~/AdminTemp/dist/js/adminlte.js"></script>
     <!-- OPTIONAL SCRIPTS -->
-    <script src="../AdminTemp/plugins/chart.js/Chart.min.js"></script> 
-    <script src="../AdminTemp/dist/js/demo.js"></script>
-    <script src="../AdminTemp/dist/js/pages/dashboard3.js"></script><!--989'dn itaberen bu kısım chartları yani site üzerindeki hareket-->
+    <script src="~/AdminTemp/plugins/chart.js/Chart.min.js"></script>
+    <script src="~/AdminTemp/dist/js/demo.js"></script>
+    <script src="~/AdminTemp/dist/js/pages/dashboard3.js"></script><!--989'dn itaberen bu kısım chartları yani site üzerindeki hareket-->
+    <script src="~/AdminTemp/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(function () {
+            //Add text editor
+            $('#compose-textarea').summernote().noConflict;
+        })
+    </script>
+    <!--üstteki script kısmı newmessage'da sayfanın düzgün yüklenememesi nedeniyle eklendi.-->
 </body>
 </html>

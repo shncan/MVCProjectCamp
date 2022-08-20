@@ -18,6 +18,9 @@ namespace EntityLayer.Concrete
         [StringLength(50)]
         public string Subject { get; set; }
         //[StringLength(1000)] burayı boş bırakınca ne olacak onu görmek için böyle yapıyoruz.
+
+        public DateTime ContactDate { get; set; }
+
         public string Message { get; set; }
     }
 }
