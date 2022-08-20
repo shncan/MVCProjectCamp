@@ -143,6 +143,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
@@ -312,6 +313,8 @@
     <Content Include="AdminTemp\docs\_layouts\home.html" />
     <Content Include="AdminTemp\docs\_layouts\page.html" />
     <Content Include="AdminTemp\docs\_layouts\post.html" />
+    <Content Include="AdminTemp\error400\css\style.css" />
+    <Content Include="AdminTemp\error400\index.html" />
     <Content Include="AdminTemp\index.html" />
     <Content Include="AdminTemp\index2.html" />
     <Content Include="AdminTemp\index3.html" />
@@ -2309,6 +2312,7 @@
     <Content Include="Views\Message\NewMessage.cshtml" />
     <Content Include="Views\Message\GetInboxMessageDetails.cshtml" />
     <Content Include="Views\Message\GetSendboxMessageDetails.cshtml" />
+    <Content Include="Views\ErrorPage\Page404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
