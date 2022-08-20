@@ -19,6 +19,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<Heading> Headings { get; set; }
         public DbSet<Writer> Writers { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<ImageFile> ImageFiles { get; set; }
 
 
         //Yukarıdaki kullanımda örnek olarak Heading bizim burada oluşturduğumuz propertynin adı. Ondan türeyen Headings ise sql'de oluşturulacak tablonun adı.

@@ -144,6 +144,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
@@ -315,6 +316,16 @@
     <Content Include="AdminTemp\docs\_layouts\post.html" />
     <Content Include="AdminTemp\error400\css\style.css" />
     <Content Include="AdminTemp\error400\index.html" />
+    <Content Include="AdminTemp\images\bernardarnault.jpg" />
+    <Content Include="AdminTemp\images\billgates.jpg" />
+    <Content Include="AdminTemp\images\elonmusk.jpg" />
+    <Content Include="AdminTemp\images\gautamadani.jpg" />
+    <Content Include="AdminTemp\images\jeffbezos.jpg" />
+    <Content Include="AdminTemp\images\larryellison.jpg" />
+    <Content Include="AdminTemp\images\larrypage.jpg" />
+    <Content Include="AdminTemp\images\mukeshambani.jpg" />
+    <Content Include="AdminTemp\images\sergeybrin.jpg" />
+    <Content Include="AdminTemp\images\warrenbuffet.jpg" />
     <Content Include="AdminTemp\index.html" />
     <Content Include="AdminTemp\index2.html" />
     <Content Include="AdminTemp\index3.html" />
@@ -2313,6 +2324,7 @@
     <Content Include="Views\Message\GetInboxMessageDetails.cshtml" />
     <Content Include="Views\Message\GetSendboxMessageDetails.cshtml" />
     <Content Include="Views\ErrorPage\Page404.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
