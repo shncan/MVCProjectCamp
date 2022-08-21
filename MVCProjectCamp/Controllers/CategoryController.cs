@@ -17,6 +17,7 @@ namespace MVCProjectCamp.Controllers
 
         CategoryManager cm = new CategoryManager(new EfCategoryDal()); //manager'den nesne türettiğimiz zaman parantez içerisinde bir parametre göndermeliyiz. o parametreyi buradan alacağız.
         
+        
         // GET: Category
         public ActionResult Index()
         {
