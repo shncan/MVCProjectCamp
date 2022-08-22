@@ -21,12 +21,6 @@
     @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>) ViewBag.vlc, new { @class="form-control"})
 
     <br />
-    @Html.Label("Yazar")
-    
-    @Html.DropDownListFor(x=>x.WriterID,(List<SelectListItem>) ViewBag.vlw,new {@class="form-control"})
-    @*@Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })*@
-    @Html.ValidationMessageFor(x => x.WriterID)
-    <br />
     <button class="btn btn-info">Başlık Oluştur</button>
 
     <!--ÖNEMLİ NOT: BİZ BURADA BAŞLIĞI ADMİN TARAFINDA OLUŞTURUYORUZ. YANİ GİRİŞİ SADECE ADMİN SAĞLAYABİLİR.

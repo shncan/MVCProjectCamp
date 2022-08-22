@@ -2,7 +2,6 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <script src="~/AdminTemp/plugins/jquery/jquery.min.js"></script>  <!-- bu kısım mesaj ekleme sayfasındaki hatanın çözümü için buraya eklendi-->
 
-  
+
 
 </head>
 <!--
@@ -38,10 +37,10 @@ to get the desired effect
         <!-- Navbar -->
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:chocolate">
+        <aside class="main-sidebar sidebar-dark-indigo elevation-4" style="background-color:royalblue">  <!--<aside class="main-sidebar sidebar-dark-primary elevation-4">-->
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="~/AdminTemp/dist/img/dobby.jpg" alt="Ev Cini Dobby" class="brand-image img-circle elevation-1" @*class="brand-image img-circle elevation-3"*@
+                <img src="~/AdminTemp/dist/img/dobby.jpg" alt="Ev Cini Dobby"  class="brand-image img-fluid"  @*class="brand-image img-circle elevation-3"*@
                      style="opacity: .8">
                 <span class="brand-text font-weight-light">Site Yapım Örneği</span> <!--Admin-->
             </a>
@@ -54,7 +53,7 @@ to get the desired effect
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">
-                            Admin Paneli>
+                            Admin Paneli
                         </a>
                     </div>
                 </div>
@@ -63,79 +62,32 @@ to get the desired effect
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
-                        @if (User.IsInRole("X")) {   //bu kod ile kullanıcının rolü B ise burayı görüntüleyebilsin değilse görüntüleyememesini sağladık.
-
-
                         <li class="nav-item has-treeview">
                             <!--burada treeview menu-open şeklindeydi, seçili olmaısnı kaldırmak için menu-open ı sildik-->
                             <a href="/AdminCategory/Index/" class="nav-link">
                                 <!--Burada menümüzün solundaki menüye link veriyoruz.-->
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Kategoriler
+                                    Profil
                                 </p>
                             </a>
                         </li>
-                        }
                         <li class="nav-item">
-                            <a href="/Heading/Index/" class="nav-link">
+                            <a href="/WriterPanel/MyHeading/" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
-                                    Başlıklar
+                                    Başlıklarım
                                 </p>
                             </a>
                         </li>
+
                         <li class="nav-item has-treeview">
-                            <a href="/Writer/Index/" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    Yazarlar
-                                </p>
-                            </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    Grafikler
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="pages/charts/chartjs.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Grafik 1</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/charts/flot.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Grafik 2</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/charts/inline.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Grafik 3</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="/About/Index" class="nav-link">
-                                <!-- burası ile about'u referanslıyoruz. yani tıkladığımız zaman about sayfasına gidecek yolu oluşturuyoruz.-->
-                                <i class="nav-icon fas fa-tree"></i>
-                                <p>
-                                    Hakkımızda
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="/Contact/Index/" class="nav-link">
+                            <a href="/WriterPanel/MyHeading/" class="nav-link"> <!--bu kısım ile yazar kendi başlıklarına gidecek. -->
                                 <i class="nav-icon fas fa-edit"></i>
                                 <p>
-                                    İletişim & Mesajlar
+                                    Mesajlarım
                                 </p>
                             </a>
                         </li>
@@ -143,23 +95,7 @@ to get the desired effect
                             <a href="pages/calendar.html" class="nav-link">
                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                 <p>
-                                    Yetkilendirmeler
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Gallery/Index/" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
-                                <p>
-                                    Galeri
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="/ErrorPage/Page404" class="nav-link">  <!-- burada ekstra özellik yapıyoruz. Webconfig'in içerisine <customErrors mode="On"> alt başlığını da <error statusCode="404" redirect="/ErrorPage/Page404/"/> -->
-                                <i class="nav-icon far fa-envelope"></i>
-                                <p>
-                                    Hata Sayfaları                                    
+                                    Yazılarım
                                 </p>
                             </a>
                         </li>
@@ -234,3 +170,4 @@ to get the desired effect
     <!--üstteki script kısmı newmessage'da sayfanın düzgün yüklenememesi nedeniyle eklendi.-->
 </body>
 </html>
+
