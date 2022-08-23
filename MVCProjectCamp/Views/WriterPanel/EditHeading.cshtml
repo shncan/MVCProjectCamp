@@ -7,20 +7,20 @@
 <h2>Başlık Güncelleme Sayfası</h2>
 @using (Html.BeginForm("EditHeading", "WriterPanel", FormMethod.Post))
 {
-    <div class="form-group">
-        @Html.HiddenFor(x => x.HeadingID)
-        @Html.HiddenFor(x=>x.HeadingDate)
-        @Html.HiddenFor(x=>x.WriterID)
-        @Html.Label("Başlık Adı")
-        @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
-        <br />
-        @Html.Label("Kategori")
-        @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @Class = "form-control" })
-        <br />
-        <button class="btn btn-success">Güncelle</button>
-        <!--güncelleme yapabilmek için sütunların tamamını doldurmamız gerekiyor, yoksa hata döndürüyor.-->
-        <!--çözüm yolları 1-sadece doldurmak istediğimzi sütunları arka tarafta gönderebiliriz 3- yazar bilgisi arka planda gelecek, tarihi de gizleyebiliriz. sadece açıldığı anda kalsın, değiştirelemesin.-->
+<div class="form-group">
+    @Html.HiddenFor(x => x.HeadingID)
+    @Html.HiddenFor(x => x.HeadingDate)  <!--tarih güncelleme hatası veriyordu, tarihi bulamadığı için ekledik.-->
+    @Html.HiddenFor(x => x.WriterID)   <!--bu kısmı da foreign key hatası fırlattığı için ekledik.-->
+    @Html.Label("Başlık Adı")
+    @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @Class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+    <!--güncelleme yapabilmek için sütunların tamamını doldurmamız gerekiyor, yoksa hata döndürüyor.-->
+    <!--çözüm yolları 1-sadece doldurmak istediğimzi sütunları arka tarafta gönderebiliriz 3- yazar bilgisi arka planda gelecek, tarihi de gizleyebiliriz. sadece açıldığı anda kalsın, değiştirelemesin.-->
 
-    </div>
+</div>
 }
 

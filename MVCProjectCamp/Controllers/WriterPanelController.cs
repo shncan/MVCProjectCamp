@@ -27,7 +27,7 @@ namespace MVCProjectCamp.Controllers
         {
 
 
-           
+
             var values = hm.GetListByWriter();
             return View(values);
         }
@@ -78,6 +78,17 @@ namespace MVCProjectCamp.Controllers
         {
             hm.HeadingUpdate(p);
             return RedirectToAction("MyHeading");
+        }
+
+        public ActionResult DeleteHeading(int id)
+        {
+            // işlem olarak delete gibi görünse bile biz önceden de belirttiğimiz gibi aktif-pasif işlemi yapacağız.
+            // Yani status'u true ya da false yapacağız. Silme işlemi büyük verilerde sıkıntı olabilir, onun yerine aktif-pasif şeeklinde kullanım yaparız.
+            var HeadingValue = hm.GetByID(id);
+            HeadingValue.HeadingStatus = false;
+            hm.HeadingDelete(HeadingValue);
+            return RedirectToAction("MyHeading");
+
         }
     }
 

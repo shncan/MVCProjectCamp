@@ -10,6 +10,7 @@ namespace BusinessLayer.Abstract
     interface IContentService
     {
         List<Content> GetList();
+        List<Content> GetListByWriter();  //bu kısmı WriterPanelContentController için yazdık, yazara göre mesajları getirebilmek için.
         List<Content> GetListByHeadingID(int id); //GetByID'den farkı GetByID bize tek değer döndürür, ancak GetListByID ID'ye göre tüm listeyi döndürür.
         //Yukardaki GetListByID kodunu yazmamızdaki sebep tüm listeyi değil de ID'si verilen listeleri getirmek istememiz.
 

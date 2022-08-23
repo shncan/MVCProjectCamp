@@ -48,5 +48,10 @@ namespace BusinessLayer.Concrete
             //Burası yapı olarak GetByID'ye benziyor, şarta bağlı metod.
             return _contentDal.List(x => x.HeadingID == id); // burası bize id'si eşit olanların listesini getirecek. twitter'da, sözlüklerde olduğu gibi.
         }
+
+        public List<Content> GetListByWriter()
+        {
+            return _contentDal.List(x => x.WriterID == 3);
+        }
     }
 }
