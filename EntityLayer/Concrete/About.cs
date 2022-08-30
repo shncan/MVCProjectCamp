@@ -16,9 +16,9 @@ namespace EntityLayer.Concrete
         public string AboutDetails { get; set; }
         [StringLength(1000)]
         public string AboutDetails2 { get; set; }
-        [StringLength(100)]
+        [StringLength(250)]
         public string AboutImage { get; set; } // Resimleri dosya yolu olarak yükleriz, çünkü resimleri sunucuya yüklemek saçma bir işlem.
-        [StringLength(100)]
+        [StringLength(250)]
         public string AboutImage2 { get; set; }
 
         

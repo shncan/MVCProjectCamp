@@ -29,9 +29,9 @@ namespace BusinessLayer.Concrete
             return _headingDal.List();
         }
 
-        public List<Heading> GetListByWriter()  //bu kısmı authentice writer için sonradan hazırladık. heading nesnesi türetmek yerine id kullanmamızın sebebi dışardan parametre olarak vereceğimiz için.
+        public List<Heading> GetListByWriter(int id)  //bu kısmı authentice writer için sonradan hazırladık. heading nesnesi türetmek yerine id kullanmamızın sebebi dışardan parametre olarak vereceğimiz için.
         {
-            return _headingDal.List(x => x.WriterID == 4);
+            return _headingDal.List(x => x.WriterID == id); // x.WriterID == 6
         }
 
         public void HeadingAdd(Heading heading)

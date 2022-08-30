@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
 
         public void ContentAdd(Content content)
         {
-            throw new NotImplementedException();
+            _contentDal.Insert(content);
         }
 
         public void ContentDelete(Content content)
@@ -40,7 +40,7 @@ namespace BusinessLayer.Concrete
 
         public List<Content> GetList()
         {
-            throw new NotImplementedException();
+            return _contentDal.List();
         }
 
         public List<Content> GetListByHeadingID(int id) //buradaki amacımız da listeyi başlık id'sine göre getirmek istememiz.
@@ -49,9 +49,9 @@ namespace BusinessLayer.Concrete
             return _contentDal.List(x => x.HeadingID == id); // burası bize id'si eşit olanların listesini getirecek. twitter'da, sözlüklerde olduğu gibi.
         }
 
-        public List<Content> GetListByWriter()
+        public List<Content> GetListByWriter(int id)
         {
-            return _contentDal.List(x => x.WriterID == 3);
+            return _contentDal.List(x => x.WriterID == id);
         }
     }
 }

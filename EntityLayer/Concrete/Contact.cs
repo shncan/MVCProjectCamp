@@ -11,11 +11,11 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int ContactID { get; set; }
-        [StringLength(50)]
+        [StringLength(250)]
         public string UserName { get; set; }
-        [StringLength(50)]
+        [StringLength(250)]
         public string UserMail { get; set; }
-        [StringLength(50)]
+        [StringLength(250)]
         public string Subject { get; set; }
         //[StringLength(1000)] burayı boş bırakınca ne olacak onu görmek için böyle yapıyoruz.
 

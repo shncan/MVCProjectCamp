@@ -16,10 +16,12 @@
     <br />
     <!--Oluşturma tarihi controller tarafında otomatik olarak alınabileceği için buraya o kısmı eklemiyoruz.-->
     @Html.Label("Kategori")
-    @*@Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.CategoryID)*@
-    @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>) ViewBag.vlc, new { @class="form-control"})
-
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CategoryID)
+    <br />
+    @Html.Label("Yazar")
+    @Html.DropDownListFor(x=>x.WriterID,(List<SelectListItem>)ViewBag.vlw,new{@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.WriterID)
     <br />
     <button class="btn btn-info">Başlık Oluştur</button>
 

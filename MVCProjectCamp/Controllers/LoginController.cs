@@ -9,6 +9,7 @@ using System.Web.Security;
 
 namespace MVCProjectCamp.Controllers
 {
+    [AllowAnonymous]  // bu kodla global.asax'a yazdığım GlobalFilters.Filters.Add(new AuthorizeAttribute()); koddan muhaf tutuyoruz, istediğimiz tek bu sayfaya erişilmesi.
     public class LoginController : Controller
     {
         // GET: Login
@@ -61,6 +62,13 @@ namespace MVCProjectCamp.Controllers
             }
             
 
+        }
+
+        public ActionResult Logout()  //siteye giriş işlemleri ve authenticationları yaptığımız için buraya bir de çıkış işlemi ekliyoruz.
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("WriterLogin", "Login");
         }
     }
 }

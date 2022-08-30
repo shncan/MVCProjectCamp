@@ -11,7 +11,7 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int CategoryID { get; set; }
-        [StringLength(50)]
+        [StringLength(250)]
         public string CategoryName { get; set; }
         [StringLength(200)]
         public string CategoryDescription { get; set; }

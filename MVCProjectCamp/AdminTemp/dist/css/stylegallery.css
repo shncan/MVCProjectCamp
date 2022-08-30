@@ -1,0 +1,10 @@
+
+h2{
+  font-size: 3em;
+  border-bottom: 2px solid pink;
+  border-right: solid 2px pink;
+  width: 400px;
+  text-align:center;
+  -webkit-box-shadow:4px 4px 5px #888888;
+  margin:0px;
+}

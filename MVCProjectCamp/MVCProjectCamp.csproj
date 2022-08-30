@@ -148,6 +148,7 @@
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
@@ -192,6 +193,7 @@
     <Content Include="AdminTemp\dist\css\alt\adminlte.pages.min.css" />
     <Content Include="AdminTemp\dist\css\alt\adminlte.plugins.css" />
     <Content Include="AdminTemp\dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="AdminTemp\dist\css\stylegallery.css" />
     <Content Include="AdminTemp\dist\img\2.png" />
     <Content Include="AdminTemp\dist\img\4.png" />
     <Content Include="AdminTemp\dist\img\admin55.jpg" />
@@ -212,6 +214,7 @@
     <Content Include="AdminTemp\dist\img\credit\visa.png" />
     <Content Include="AdminTemp\dist\img\default-150x150.png" />
     <Content Include="AdminTemp\dist\img\dobby.jpg" />
+    <Content Include="AdminTemp\dist\img\iconheading.png" />
     <Content Include="AdminTemp\dist\img\icons.png" />
     <Content Include="AdminTemp\dist\img\photo1.png" />
     <Content Include="AdminTemp\dist\img\photo2.png" />
@@ -2555,6 +2558,11 @@
     <Content Include="Views\WriterPanelMessage\NewMessage.cshtml" />
     <Content Include="Views\WriterPanelContent\MyContent.cshtml" />
     <Content Include="Views\Login\WriterLogin.cshtml" />
+    <Content Include="Views\Main\Headings.cshtml" />
+    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\WriterPanel\AllHeading.cshtml" />
+    <Content Include="Views\WriterPanelContent\AddContent.cshtml" />
+    <Content Include="Views\WriterPanelContent\ToDoList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

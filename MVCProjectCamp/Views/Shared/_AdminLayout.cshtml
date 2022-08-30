@@ -11,7 +11,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>AdminTemp | Dashboard 3</title>
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="~/AdminTemp/plugins/fontawesome-free/css/all.min.css"> <!-- bu kısım ise yazı fontları&&ayrıca buraya dosya yollarını ekliyoruz ../AdminLTE-3.0.4-->
+    <link rel="stylesheet" href="~/AdminTemp/plugins/fontawesome-free/css/all.min.css"> <!-- bu kısım ise yazı fontları&&ayrıca buraya dosya yollarını ekliyoruz ../AdminTemp-->
     <!-- IonIcons -->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <script src="~/AdminTemp/plugins/jquery/jquery.min.js"></script>  <!-- bu kısım mesaj ekleme sayfasındaki hatanın çözümü için buraya eklendi-->
 
-  
+
 
 </head>
 <!--
@@ -54,7 +54,7 @@ to get the desired effect
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">
-                            Admin Paneli>
+                            Admin Paneli
                         </a>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ to get the desired effect
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
-                        @if (User.IsInRole("X")) {   //bu kod ile kullanıcının rolü B ise burayı görüntüleyebilsin değilse görüntüleyememesini sağladık.
+                        @if (User.IsInRole("X")) {   //bu kod ile kullanıcının rolü X ise burayı görüntüleyebilsin değilse görüntüleyememesini sağladık.
 
 
                         <li class="nav-item has-treeview">

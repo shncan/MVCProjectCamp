@@ -11,21 +11,21 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int WriterID { get; set; }
-        [StringLength(50)]
+        [StringLength(250)]
         public string WriterName { get; set; }
-        [StringLength(50)]
+        [StringLength(250)]
         public string WriterSurname { get; set; }
         [StringLength(250)]                      //resim uzantılarının artabileceğinden dolayı 100'den 250'ye çıkardık.
         public string WriterImage { get; set; }
 
-        [StringLength(100)]
+        [StringLength(250)]
         public string WriterAbout { get; set; }
 
-        [StringLength(200)]
+        [StringLength(250)]
         public string WriterMail { get; set; }
-        [StringLength(200)]
+        [StringLength(250)]
         public string WriterPassword { get; set; }
-        [StringLength(50)]
+        [StringLength(250)]
         public string WriterTitle { get; set; }
 
         public bool WriterStatus { get; set; } // bu kısmı yazar eğer hesabını silerse durumuna göre ekledik. silmek yerine aktif-pasif yapısını kullanacağız.

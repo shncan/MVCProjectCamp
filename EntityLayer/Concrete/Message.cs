@@ -14,13 +14,13 @@ namespace EntityLayer.Concrete
         [Key]
         public int MessageID { get; set; }
 
-        [StringLength(50)]
+        [StringLength(250)]
         public string SenderMail { get; set; }  //mesajlaşmada bu kısım gönderen alttaki de alıcı olacak.
 
-        [StringLength(50)]
+        [StringLength(250)]
         public string ReceiverMail { get; set; }
 
-        [StringLength(100)]
+        [StringLength(250)]
         public string Subject { get; set; }        //önceki subject kullanımlarında olduğu gibi genel değil de bir konuya bağlı mesajlar olsun istiyoruz.
 
 

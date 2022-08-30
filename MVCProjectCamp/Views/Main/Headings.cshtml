@@ -1,4 +1,7 @@
-﻿
+﻿@using EntityLayer.Concrete
+@model List<Heading>
+
+
 @{
     Layout = null;
 }
@@ -37,23 +40,24 @@ to get the desired effect
         <!-- Navbar -->
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-indigo elevation-4" style="background-color:royalblue">  <!--<aside class="main-sidebar sidebar-dark-primary elevation-4">-->
+        <aside class="main-sidebar sidebar-dark-indigo elevation-4" style="background-color:royalblue">
+            <!--<aside class="main-sidebar sidebar-dark-primary elevation-4">-->
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="~/AdminTemp/dist/img/dobby.jpg" alt="Ev Cini Dobby"  class="brand-image img-fluid"  @*class="brand-image img-circle elevation-3"*@
+                <img src="~/AdminTemp/dist/img/dobby.jpg" alt="Ev Cini Dobby" class="brand-image img-fluid" @*class="brand-image img-circle elevation-3"*@
                      style="opacity: .8">
-                <span class="brand-text font-weight-light">Websitenin Adı</span> <!--Admin-->
+                <span class="brand-text font-weight-light">Yazar Oturumu</span> <!--Admin-->
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="~/AdminTemp/dist/img/admin55.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="~/AdminTemp/dist/img/iconheading.png" style="width:auto"  alt="User Image"/>                        
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">
-                            Kullanıcı/Yazar Oturumu
+                            <h2 style="color:goldenrod; align-content:space-between">Başlıklar </h2>   
                         </a>
                     </div>
                 </div>
@@ -61,67 +65,20 @@ to get the desired effect
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-         with font-awesome or any other icon font library -->
-                        <li class="nav-item has-treeview">
-                            <!--burada treeview menu-open şeklindeydi, seçili olmaısnı kaldırmak için menu-open ı sildik-->
-                            <a href="/AdminCategory/Index/" class="nav-link">
-                                <!--Burada menümüzün solundaki menüye link veriyoruz.-->
-                                <i class="nav-icon fas fa-assistive-listening-systems"></i>
-                                <p>
-                                    Profil
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/WriterPanel/AllHeading/" class="nav-link">
-                                <i class="nav-icon fas fa-list-ol"></i>
-                                <p>
-                                    Tüm Başlıklar
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/WriterPanel/MyHeading/" class="nav-link">
-                                <i class="nav-icon fas fa-list-ul"></i>
-                                <p>
-                                    Başlıklarım
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="/WriterPanelMessage/Sendbox/" class="nav-link">
-                                <!--bu kısım ile yazar kendi başlıklarına gidecek. -->
-                                <i class="nav-icon fas fa-edit"></i>
-                                <p>
-                                    Mesajlarım
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/WriterPanelContent/MyContent/" class="nav-link">
-                                <i class="nav-icon fas fa-calendar-alt"></i>
-                                <p>
-                                    Yazılarım
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="/Main/Headings" class="nav-link">
-                                <i class="nav-icon fas fa-step-backward"></i>
-                                <p>
-                                    Siteye Git
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="/Login/Logout" class="nav-link">
-                                <i class="nav-icon far fa-arrow-alt-circle-down"></i>
-                                <p>
-                                    Çıkış Yap
-                                </p>
-                            </a>
-                        </li>
+    with font-awesome or any other icon font library -->
+
+                        @foreach (var item in Model)
+                        {
+
+
+                            <li class="nav-item">
+                                <a href="/Main/Headings/@item.HeadingID" class="nav-link"> <!--"/WriterPanel/MyHeading/"-->
+                                    <p>
+                                        @item.HeadingName
+                                    </p>
+                                </a>
+                            </li>
+                        }
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -130,11 +87,11 @@ to get the desired effect
         </aside>
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
+            @Html.Action("Index","Main")
             <!-- Content Header (Page header) -->
             <!-- /.content-header -->
             <!-- Main content -->
             <div class="content">
-                @RenderBody()
                 <!-- /.container-fluid -->
             </div>
             <!-- /.content -->
