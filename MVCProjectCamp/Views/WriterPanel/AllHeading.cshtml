@@ -1,5 +1,10 @@
 ﻿@using EntityLayer.Concrete
-@model List<Heading>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Heading>
+<!--model List<Heading> yukarının önceki hali böyleydi, ancak biz pagedlist'e göre listelemek istediğimiz için ana kodu ona çevirdik. Aldığımız PagedList hatasının da çözümü ayrıca.-->
+<!-- en aşağıda Html.PagedListPager((IPagedList)Model,p=>Url.Action("AllHeading", new { p })) yapısını kullanabilmemiz için using PagedList.Mvc lazım.-->
+
 
 
 @{
@@ -55,8 +60,8 @@
                                 Oluşturan Yazar
                             </th>
                             @*<th>
-                        Project Progress
-                    </th>*@
+                                    Project Progress
+                                </th>*@
                             <th style="width: 8%" class="text-center">
                                 Kategori
                             </th>
@@ -195,3 +200,12 @@
 </body>
 </html>
 @*<a href="/WriterPanel/NewHeading/" class="btn btn-primary">Yeni Başlık Girişi</a>*@
+
+@Html.PagedListPager((IPagedList)Model, p => Url.Action("AllHeading", new { p }),new PagedListRenderOptions
+{
+    LiElementClasses= new List<string>         
+    { "page-link" }
+
+})
+
+<!--yukarda her defasında allheadingde git, giderken de her defasında p oluşturarak gideceksin dedik. ayrıca renderoptions blogu ve alttaki kodlarla da stil verdik.-->

@@ -30,7 +30,7 @@
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Gelen Mesajlar </h3>  <!--Inbox-->
+                        <h3 class="card-title">Gönderilen Mesajlar </h3>  <!--Inbox-->
                         <div class="card-tools">
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control" placeholder="Mail Kutusunda Ara"> <!--Search Mail-->
@@ -83,7 +83,7 @@
                                             <td class="mailbox-star"><a href="/WriterPanelMessage/GetSendboxMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td> <!--burada userlara tıklanınca ayrıntı veren listenin kodları yazıldı.-->
                                             <td class="mailbox-name"><a href="/WriterPanelMessage/GetSendboxMessageDetails/@item.MessageID">@item.ReceiverMail</a></td>
                                             <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.MessageContent.Substring(0, 15)...
+                                                <b>@item.Subject</b> - @item.MessageContent.Substring(0, 26)...
                                             </td>
                                             <td class="mailbox-attachment"></td>
                                             <td class="mailbox-date">@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>

@@ -7,6 +7,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
+using BusinessLayer.ValidationRules;
+using FluentValidation.Results;
 
 namespace MVCProjectCamp.Controllers
 {
@@ -17,17 +21,50 @@ namespace MVCProjectCamp.Controllers
 
         HeadingManager hm = new HeadingManager(new EfHeadingDal());
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        WriterManager wm = new WriterManager(new EfWriterDal());
         Context c = new Context();
-       
-        public ActionResult WriterProfile()
+
+        [HttpGet]
+        public ActionResult WriterProfile(int id=0)
         {
-            return View();
+            string p = (string)Session["WriterMail"];
+            id = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
+            var writerValue = wm.GetByID(id);
+            return View(writerValue);
         }
+
+
+        [HttpPost]
+        public ActionResult WriterProfile(Writer p)
+        {
+            WriterValidator writerValidator = new WriterValidator();
+            ValidationResult results = writerValidator.Validate(p);
+            if (results.IsValid)
+            {
+                wm.WriterUpdate(p); ;
+                return RedirectToAction("AllHeading","WriterPanel");
+
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+
+
+        }
+
+
+
+
 
         public ActionResult MyHeading(string p) //buradan yapabildiğimiz gibi istersek ayrıca authentice olacak yazar için başka bir controller klasörü oluşturup oraya tanımlayabilirdik.
         {
            
-            p = (String)Session["WriterMail"];
+            p = (string)Session["WriterMail"];
             var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
             var values = hm.GetListByWriter(writeridinfo);
             return View(values);
@@ -96,9 +133,9 @@ namespace MVCProjectCamp.Controllers
 
         }
 
-        public ActionResult AllHeading()
+        public ActionResult AllHeading(int p = 1)
         {
-            var headings = hm.GetList();
+            var headings = hm.GetList().ToPagedList(p, 4);
             return View(headings);
         }
     }
