@@ -17,7 +17,7 @@ namespace MVCProjectCamp.Controllers
         CategoryManager cm = new CategoryManager(new EfCategoryDal()); // bu şekilde yapmamızdaki neden değişiklik yapmak istediğimde daha rahat uygulayabilmek.
         // GET: AdminCategory
 
-        [Authorize(Roles="Y")] //Bu komutla categorysayfasını yalnızca hesaba giriş yapmış kişiler görebilecek. burada eklediğimiz Roles="Y" ile de bu kısmı sadece Y rolüne sahip admin görsün dedik.
+        /*[Authorize(Roles="Y")] *///Bu komutla categorysayfasını yalnızca hesaba giriş yapmış kişiler görebilecek. burada eklediğimiz Roles="Y" ile de bu kısmı sadece Y rolüne sahip admin görsün dedik.
         public ActionResult Index()
         {
             var categoryvalues = cm.GetList();

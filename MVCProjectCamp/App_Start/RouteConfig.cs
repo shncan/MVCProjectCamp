@@ -16,7 +16,7 @@ namespace MVCProjectCamp
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "HomePage", id = UrlParameter.Optional }  //burası bize projeyi hostinge taşıdıktan sonra açılacak sayfanının belirlenmesinde kullanacağımız kısım.
             );
         }
     }

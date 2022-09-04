@@ -62,24 +62,25 @@ to get the desired effect
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                             with font-awesome or any other icon font library -->
-                        @if (User.IsInRole("X")) {   //bu kod ile kullanıcının rolü X ise burayı görüntüleyebilsin değilse görüntüleyememesini sağladık.
+    with font-awesome or any other icon font library -->
+                        @*@if (User.IsInRole("X"))
+                        {   //bu kod ile kullanıcının rolü X ise burayı görüntüleyebilsin değilse görüntüleyememesini sağladık.*@
 
 
-                        <li class="nav-item has-treeview">
-                            <!--burada treeview menu-open şeklindeydi, seçili olmaısnı kaldırmak için menu-open ı sildik-->
-                            <a href="/AdminCategory/Index/" class="nav-link">
-                                <!--Burada menümüzün solundaki menüye link veriyoruz.-->
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Kategoriler
-                                </p>
-                            </a>
-                        </li>
-                        }
+                            <li class="nav-item has-treeview">
+                                <!--burada treeview menu-open şeklindeydi, seçili olmaısnı kaldırmak için menu-open ı sildik-->
+                                <a href="/AdminCategory/Index/" class="nav-link">
+                                    <!--Burada menümüzün solundaki menüye link veriyoruz.-->
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Kategoriler
+                                    </p>
+                                </a>
+                            </li>
+                        @*}*@
                         <li class="nav-item">
                             <a href="/Heading/Index/" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
+                                <i class="nav-icon fas fa-th  text-info"></i>
                                 <p>
                                     Başlıklar
                                 </p>
@@ -87,7 +88,7 @@ to get the desired effect
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="/Writer/Index/" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
+                                <i class="nav-icon fas fa-copy  text-info"></i>
                                 <p>
                                     Yazarlar
                                 </p>
@@ -95,28 +96,28 @@ to get the desired effect
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <i class="nav-icon fas fa-chart-pie text-info"></i>
                                 <p>
                                     Grafikler
-                                    <i class="right fas fa-angle-left"></i>
+                                    <i class="right fas fa-angle-left  text-success"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="pages/charts/chartjs.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="far fa-circle nav-icon text-warning"></i>
                                         <p>Grafik 1</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="pages/charts/flot.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="far fa-circle nav-icon  text-warning"></i>
                                         <p>Grafik 2</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="pages/charts/inline.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="far fa-circle nav-icon  text-warning "></i>
                                         <p>Grafik 3</p>
                                     </a>
                                 </li>
@@ -125,7 +126,7 @@ to get the desired effect
                         <li class="nav-item has-treeview">
                             <a href="/About/Index" class="nav-link">
                                 <!-- burası ile about'u referanslıyoruz. yani tıkladığımız zaman about sayfasına gidecek yolu oluşturuyoruz.-->
-                                <i class="nav-icon fas fa-tree"></i>
+                                <i class="nav-icon fas fa-tree  text-info"></i>
                                 <p>
                                     Hakkımızda
                                 </p>
@@ -133,15 +134,24 @@ to get the desired effect
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="/Contact/Index/" class="nav-link">
-                                <i class="nav-icon fas fa-edit"></i>
+                                <i class="nav-icon fas fa-edit  text-info"></i>
                                 <p>
                                     İletişim & Mesajlar
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Heading/HeadingLog/" class="nav-link">
+                                <!-- burası ile about'u referanslıyoruz. yani tıkladığımız zaman about sayfasına gidecek yolu oluşturuyoruz.-->
+                                <i class="nav-icon fas fa-sticky-note  text-info"></i>
+                                <p>
+                                    Loglar
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item">
-                            <a href="pages/calendar.html" class="nav-link">
-                                <i class="nav-icon fas fa-calendar-alt"></i>
+                            <a href="/Authorization/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-calendar-alt"  text-info></i>
                                 <p>
                                     Yetkilendirmeler
                                 </p>
@@ -149,32 +159,43 @@ to get the desired effect
                         </li>
                         <li class="nav-item">
                             <a href="/Gallery/Index/" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
+                                <i class="nav-icon far fa-image  text-info"></i>
                                 <p>
                                     Galeri
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="/ErrorPage/Page404" class="nav-link">  <!-- burada ekstra özellik yapıyoruz. Webconfig'in içerisine <customErrors mode="On"> alt başlığını da <error statusCode="404" redirect="/ErrorPage/Page404/"/> -->
-                                <i class="nav-icon far fa-envelope"></i>
+                            <a href="/Test/SweetAlert" class="nav-link">
+                                <!-- burada ekstra özellik yapıyoruz. Webconfig'in içerisine <customErrors mode="On"> alt başlığını da <error statusCode="404" redirect="/ErrorPage/Page404/"/> -->
+                                <i class="nav-icon fas fa-bullseye  text-info"></i>
+                                @*<i class="fa-sharp fa-solid fa-sensor-triangle-exclamation"></i>*@
                                 <p>
-                                    Hata Sayfaları                                    
+                                    Sweet Alert
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/ErrorPage/Page404" class="nav-link">
+                                <!-- burada ekstra özellik yapıyoruz. Webconfig'in içerisine <customErrors mode="On"> alt başlığını da <error statusCode="404" redirect="/ErrorPage/Page404/"/> -->
+                                <i class="nav-icon far fa-envelope  text-info"></i>
+                                <p>
+                                    Hata Sayfaları
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-book  text-info"></i>
                                 <p>
                                     Siteye Git
-                                    <i class="fas fa-angle-left right"></i>
+                                    <i class="fas fa-angle-left right "></i>
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-plus-square"></i>
+                            <a href="/Login/Logout" class="nav-link">
+                                <i class="nav-icon far fa-handshake text-info"></i>
                                 <p>
                                     Çıkış Yap
                                 </p>

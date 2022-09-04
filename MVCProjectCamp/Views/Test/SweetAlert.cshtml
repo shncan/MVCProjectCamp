@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "SweetAlert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.11.0/sweetalert2.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.11.0/sweetalert2.all.min.js"></script>
+
+<button class="btn btn-success" id="btn1" style="width:100px;height:50px;">Uygula</button>
+<button class="btn btn-danger" id="btn2" style="width:100px;height:50px;">Vazgeç</button>
+
+
+
+<link rel="stylesheet" href="src/js/jquery-ui.min.css">
+
+
+<script>
+    $('#btn1').click(function () {
+        swal("Presented BUTTON1");
+
+    });
+</script>
+
+
+
+<script>
+    $('#btn2').click(function () {
+        swal("MVC WEBSITE!!!!!!!!!!!", "BUTTON 2");
+
+    });
+</script>
+
+
+

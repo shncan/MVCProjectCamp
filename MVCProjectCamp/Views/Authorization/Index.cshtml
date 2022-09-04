@@ -1,0 +1,36 @@
+﻿@using EntityLayer.Concrete
+@model List<Admin>
+
+<!--AUTHORIZATIONCONTROLLER INDEX'I-->
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th> <!--ID ALANIYDI, görsellik için # yaptık-->
+        <th>Kullacı E-Posta</th>
+        <!--<th>Durum</th>-->
+        <th>Yetkiyi Ver</th>
+        <th>Status</th>
+        <th>Pasif Yap</th>
+        <th>Yetkiyi Al</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <th>@item.AdminID</th> <!--yine td'ye göre kalın olsun diye th yaptık.-->
+        <td>@item.AdminUsername</td>
+        <td>@item.AdminRole</td>
+        <td>Aktif</td>
+        <!--<td>item.CategoryStatus</td>-->
+        <td><a href="/AdminCategory/DeleteCategory/@item.AdminID" class="btn btn-danger">Sil</a></td>
+        <td><a href="/Authorization/EditAdmin/@item.AdminID" class="btn btn-warning">Güncelle</a></td>
+    </tr>
+    }
+</table>
+<br />
+<a href="/Authorization/AddAdmin/" class="btn btn-success">Yeni Admin Yetkilendirmesi</a>

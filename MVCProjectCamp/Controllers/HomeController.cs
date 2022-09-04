@@ -31,5 +31,12 @@ namespace MVCProjectCamp.Controllers
         {
             return View();
         }
+
+
+        [AllowAnonymous] //burasını yazmazsak eğer siteyi random bir kişi görüntülemeyez, homepage gelen kişinin karşılacağı ilk yer olacak.
+        public ActionResult HomePage()
+        {
+            return View();
+        }
     }
 }
